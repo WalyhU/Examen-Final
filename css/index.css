@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  background-color: #1d1c1c;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.header h1, h4 {
+  color: #f1f1f1;
+  text-transform: uppercase;
+}
+
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.que-son {
+  background: linear-gradient(rgb(19, 18, 18, 0.70), rgba(19, 18, 18, 0.70)),
+    url('https://ak.uecdn.es/p/108/thumbnail/entry_id/0_dyqz94sg/width//type/2/bgcolor/000000/0_dyqz94sg.jpg');
+}
+
+.forman {
+  background: linear-gradient(rgb(19, 18, 18, 0.829), rgba(19, 18, 18, 0.829)),
+    url('https://cnnespanol.cnn.com/wp-content/uploads/2020/04/200410141407-brightest-supernova-scn-super-tease.jpg?quality=100&strip=info');
+}
+
+.pequeños {
+  background: linear-gradient(rgb(19, 18, 18, 0.70), rgba(19, 18, 18, 0.70)),
+    url('https://i.blogs.es/175a6b/blackhole/1366_2000.jpg');
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  color: #f1f1f1;
+}
+
+/* Create three unequal columns that sits next to each other */
+.column {
+  padding: 20px;
+  height: 70vh;
+  /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* Middle column */
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  height: 25vh;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}

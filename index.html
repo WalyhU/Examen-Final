@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Walter Samuel Gómez Monroy | 0907-22-2993</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/tabla.css">
+</head>
+
+<body>
+  <div class="header">
+    <h4 id="titulo"></h4>
+    <h1>Agujeros negros</h1>
+  </div>
+  <div class="row">
+    <div class="column side que-son" style="background-color:rgb(211, 84, 84);">
+      <div class="contenido-columna">
+        <h2>¿Qué son?</h2><br>
+        <p>Los agujeros negros son los restos fríos de antiguas estrellas, tan densas que ninguna partícula material, ni
+          siquiera la luz, es capaz de escapar a su poderosa fuerza gravitatoria. Mientras muchas estrellas acaban
+          convertidas en enanas blancas o estrellas de neutrones, los agujeros negros representan la última fase en la
+          evolución de enormes estrellas que fueron al menos de 10 a 15 veces más grandes que nuestro sol.</p>
+      </div>
+    </div>
+    <div class="column middle forman" style="background-color:#bbb;">
+      <div class="contenido-columna">
+        <h2>¿Cómo se forman?</h2><br>
+        <p>Cuando las estrellas gigantes alcanzan el estadio final de sus vidas estallan en cataclismos conocidos como
+          supernovas. Tal explosión dispersa la mayor parte de la estrella al vacío espacial pero quedan una gran
+          cantidad
+          de restos «fríos» en los que no se produce la fusión.
+          <br> <br>
+          En estrellas jóvenes, la fusión nuclear crea energía y una presión exterior constante que se encuentra en
+          equilibrio con la fuerza de gravedad interior que produce la propia masa de la estrella. Sin embargo, en los
+          restos inertes de una supernova no hay una fuerza que se resista a la gravedad, por lo que la estrella empieza
+          a
+          replegarse sobre sí misma.
+        </p>
+      </div>
+    </div>
+    <div class="column side pequeños" style="background-color:#ccc;">
+      <div class="contenido-columna">
+        <h2>Pequeños pero poderosos</h2><br>
+        <p>
+          Los agujeros negros tienen un tamaño pequeño. Un agujero de una masa solar de un millón, como el que se
+          sospecha que se encuentra en el centro de algunas galaxias, tendría un radio de unos tres millones de
+          kilómetros, es decir, sólo unas cuatro veces el tamaño de nuestro sol. Un agujero negro con una masa igual a
+          la del sol tendría un radio de tres kilómetros.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="contenedor__tabla">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo / Carné</th>
+            <th>Fecha de Realización</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>(Realizado por) Walter Samuel Gómez Monroy</td>
+          <td>0907-22-2993</td>
+          <td>04/06/2022</td>
+        </tr>
+        <tr>
+          <td id="nombre">Walter Samuel Gómez Monroy</td>
+          <td id="correo">0907-22-2993</td>
+          <td id="fecha">04/06/2022</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    var mensaje;
+    var opcion;
+    let date = new Date();
+    let fecha = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
+    do {
+      opcion = prompt("Introduzca su nombre:", "");
+      opcion2 = prompt("Introduzca su correo o carné:", "");
+    } while (opcion == null || opcion == "" || opcion2 == null || opcion2 == "");
+    mensaje = "¡Bienvenido! " + opcion;
+    document.getElementById("titulo").innerHTML = mensaje;
+    document.getElementById("nombre").innerHTML = opcion;
+    document.getElementById("correo").innerHTML = opcion2;
+    document.getElementById("fecha").innerHTML = fecha;
+  </script>
+</body>
+
+</html>
